@@ -7,6 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  Hello
+  <ul>
+  {{#each users}}
+   <li><a href="/quiz/{{id}}">{{name}}</a></li>
+  {{/each}}
+  </ul>
 </body>
 </html>
