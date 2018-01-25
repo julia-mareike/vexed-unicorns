@@ -14,19 +14,5 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/profiles/:id', (req, res) => {
-  let id = req.params.id
-  db.getProfile(id)
-    .then(profile => {
-      console.log(profile)
-      res.render('profiles', profile[0])
-    })
-})
-
-router.post('/', (req, res) => {
-  let postData = req.body
-  db.newUser(postData)
-})
-
 module.exports = router
 
