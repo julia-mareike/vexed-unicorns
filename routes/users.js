@@ -16,10 +16,12 @@ router.get('/', (req, res) => {
 
 router.get('/quiz/:id', (req, res) => {
   const target = req.params.id
-  console.log(target)
   db.getQuestion()
     .then((countries) => {
-      res.render('quiz', {countries})
+      res.render('quiz',
+        {countries: countries,
+          answer: countries[Math.floor(Math.random() * 4)]
+        })
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
