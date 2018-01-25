@@ -14,5 +14,20 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/quiz/:id', (req, res) => {
+  const target = req.params.id
+  db.getQuestion()
+  .then((question) => {
+      db.getUser(target)
+    .then(users => {
+      res.render('quiz', { users: users }, question)
+  })
+
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
+
 module.exports = router
 
