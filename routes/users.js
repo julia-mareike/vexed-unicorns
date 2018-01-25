@@ -14,6 +14,26 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/quiz', (req, res) => {
+  const data = req.body
+  console.log(data)
+  // console.log(data.answer)
+  // console.log(data.selected)
+  if (data.answer === data.selected) {
+    res.render('correct')
+  } else {
+    res.render('incorrect')
+  }
+})
+
+router.get('/quiz/correct', (req, res) => {
+  res.render('correct')
+})
+
+router.get('/quiz/incorrect', (req, res) => {
+  res.render('incorrect')
+})
+
 router.get('/quiz/:id', (req, res) => {
   const target = req.params.id
   db.getQuestion()
