@@ -12,16 +12,16 @@
   <title>Quiz</title>
 </head>
 <body>
-  {{!-- <h1>Quiz</h1>
+  <h1>Quiz</h1>
   <h3>{{users.id}}</h3>
-  <img src="/flags/nz.png">
-
+  <img src="/flags/{{answer.code}}.png">
+ 
   <form method="POST" action="/quiz">
-  <input type="radio" name='one' value="country"> 
-  <input type="radio" name='two' value="country name">
-  <input type="radio" name='three' value="country name">
-  <input type="radio" name='four' value="country name">
+  {{#each countries}}
+  <br>
+  <input type="submit" name="{{name}}" value="{{name}}">
+    {{/each}} 
   </form>
-   --}}
+  
 </body>
 </html>
