@@ -16,13 +16,10 @@ router.get('/', (req, res) => {
 
 router.get('/quiz/:id', (req, res) => {
   const target = req.params.id
+  console.log(target)
   db.getQuestion()
-  .then((question) => {
-      db.getUser(target)
-    .then(users => {
-      res.render('quiz', { users: users }, question)
-  })
-
+    .then((countries) => {
+      res.render('quiz', {countries})
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
@@ -30,4 +27,3 @@ router.get('/quiz/:id', (req, res) => {
 })
 
 module.exports = router
-
