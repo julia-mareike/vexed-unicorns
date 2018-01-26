@@ -19,7 +19,7 @@ router.post('/quiz', (req, res) => {
   console.log(data)
   // console.log(data.answer)
   // console.log(data.selected)
-  if (data.answer === data.selected) {
+  if (data.answerName === data.selected) {
     res.render('correct', data)
   } else {
     res.render('incorrect', data)
@@ -39,8 +39,7 @@ router.get('/quiz/:id', (req, res) => {
   db.getQuestion()
     .then((countries) => {
       res.render('quiz',
-        { //userName: getUsers(target),
-          countries: countries,
+        { countries: countries,
           answer: countries[Math.floor(Math.random() * 4)]
         })
     })
