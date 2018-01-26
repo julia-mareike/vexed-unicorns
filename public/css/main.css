@@ -7,6 +7,14 @@ body.homepage {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body.correct {
+background-color: lightgreen;
+}
+
+body.incorrect {
+  background-color: lightpink;
+}
+
 img {
   border: solid black 2px;
 }

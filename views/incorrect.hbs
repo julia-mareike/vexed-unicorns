@@ -11,23 +11,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
-<body>
- <h1> Sooo close! </h1>
-
- You chose: {{selected}}
- <br>
-
- The answer is: 
- <br>
- {{answerName}}!
+<body class="incorrect">
+  <div class="container">
+ <h1 class="titlehome"> Sooo close! </h1>
+<div class="col-md-12 home">
+ <p>You chose:  </p>
+   <h3>{{selected}}</h3>
+ <p>The answer is: </p>
+ <h2>{{answerName}}!</h2>
 <br>
-
 <figure class="answer">
- <img src="flags/{{answerCode}}.png">
+ <img class="img-fluid" src="flags/{{answerCode}}.png">
 </figure>
 
-<a href = "/quiz/1">Next flag!</a>
+<a href= "/quiz/1" role="button" class="btn btn-success">Next flag!</a>
 <br>
-  <a href="/">I've had enough flags thx</a>
+<br>
+  <a href="/" role="button" class="btn btn-success">I've had enough flags thx</a>
+  </div>
+  </div>
 </body>
 </html>
