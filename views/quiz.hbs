@@ -11,11 +11,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <title>Quiz</title>
 </head>
-<body>
+<body class="quiz">
   <div class="container">
   <h1 class="titlehome">Quiz</h1>
   <div class="col-md-12 home">
-  <h3>{{users.id}}</h3>
   <img class="img-fluid" src="/flags/{{answer.code}}.png">
      
   <form method="POST" action="/quiz">
@@ -28,7 +27,9 @@
 
     {{/each}} 
   </form>
-  </div>
+   </div>
+  <h3>{{UserName.id}}</h3>
+   
 </div>  
 </body>
 </html>

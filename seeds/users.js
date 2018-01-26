@@ -22,7 +22,9 @@ exports.seed = function (knex, Promise) {
         {id: 15, name: 'Stina Muller'},
         {id: 16, name: 'Tian du Toit'},
         {id: 17, name: 'Timothy Tolley'},
-        {id: 18, name: 'Tyler Griffin'}
+        {id: 18, name: 'Tyler Griffin'},
+        {id: 19, name: 'Paul Brabet'}
+        
       ])
     })
 }
