@@ -12,7 +12,9 @@
   <title>Quiz</title>
 </head>
 <body>
-  <h1>Quiz</h1>
+  <div class="container">
+  <h1 class="titlehome">Quiz</h1>
+  <div class="col-md-12 home">
   <h3>{{users.id}}</h3>
   <img class="img-fluid" src="/flags/{{answer.code}}.png">
      
@@ -21,11 +23,12 @@
   <input type="hidden" value="{{answer.code}}" name="answerCode" />
   {{#each countries}}
   <br>
-  <input type="submit" name="selected" value="{{name}}">
+  <input class="answerbuttons" type="submit" name="selected" value="{{name}}">
  
 
     {{/each}} 
   </form>
-  
+  </div>
+</div>  
 </body>
 </html>

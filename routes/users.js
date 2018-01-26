@@ -39,8 +39,7 @@ router.get('/quiz/:id', (req, res) => {
   db.getQuestion()
     .then((countries) => {
       res.render('quiz',
-        { //userName: getUsers(target),
-          countries: countries,
+        { countries: countries,
           answer: countries[Math.floor(Math.random() * 4)]
         })
     })
