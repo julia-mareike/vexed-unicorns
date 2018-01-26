@@ -1,4 +1,8 @@
 body {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body.homepage {
   background: #ffc url("../images/rainbow_map.png") no-repeat center center fixed;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -6,3 +10,22 @@ body {
 img {
   border: solid black 2px;
 }
+
+h1.titlehome{
+  text-align: center;
+  font-size: 4em;
+  margin: 20px;
+}
+
+div.home {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5)
+ 
+}
+
+a.content{
+  color: black;
+  font-size: 1em;
+}
+

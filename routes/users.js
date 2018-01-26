@@ -20,17 +20,17 @@ router.post('/quiz', (req, res) => {
   // console.log(data.answer)
   // console.log(data.selected)
   if (data.answer === data.selected) {
-    res.render('correct')
+    res.render('correct', data)
   } else {
-    res.render('incorrect')
+    res.render('incorrect', data)
   }
 })
 
-router.get('/quiz/correct', (req, res) => {
+router.get('/correct', (req, res) => {
   res.render('correct')
 })
 
-router.get('/quiz/incorrect', (req, res) => {
+router.get('/incorrect', (req, res) => {
   res.render('incorrect')
 })
 
@@ -39,7 +39,8 @@ router.get('/quiz/:id', (req, res) => {
   db.getQuestion()
     .then((countries) => {
       res.render('quiz',
-        {countries: countries,
+        { //userName: getUsers(target),
+          countries: countries,
           answer: countries[Math.floor(Math.random() * 4)]
         })
     })

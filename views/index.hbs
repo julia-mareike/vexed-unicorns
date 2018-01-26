@@ -12,13 +12,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <title>Vexed</title>
 </head>
-<body>
-  <h1>Welcome Back!</h1>
+<body class="homepage">
+  <div class="container">
+  <h1 class="titlehome">Welcome Back!</h1>
 
-  <ul>
+<div class="col-md-12 home">
+  
   {{#each users}}
-   <li><a href="/quiz/{{id}}">{{name}}</a></li>
+  <p>
+   <a class="content" href="/quiz/{{id}}"><strong>{{name}}</strong></a><br>
+  </p>
   {{/each}}
-  </ul>
+  
+  </div>
+  </div>
 </body>
 </html>
