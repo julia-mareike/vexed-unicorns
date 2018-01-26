@@ -31,7 +31,8 @@ h1.titlehome{
 
 div.home {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  margin: 15px;
   background-color: rgba(255, 255, 255, 0.5)
  
 }
@@ -42,8 +43,8 @@ a.content{
 }
 
 input.answerbuttons{
-  min-width: 300px;
-  padding: 5px;
+  width: 300px;
+  padding: 10px;
   margin: 10px;
 }
 
