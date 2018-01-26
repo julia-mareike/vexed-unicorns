@@ -17,8 +17,8 @@
   <img class="img-fluid" src="/flags/{{answer.code}}.png">
      
   <form method="POST" action="/quiz">
-  <input type="hidden" value="{{answer.name}}" name="answer" />
-  <input type="hidden" value="{{answer.code}}" name="answer" />
+  <input type="hidden" value="{{answer.name}}" name="answerName" />
+  <input type="hidden" value="{{answer.code}}" name="answerCode" />
   {{#each countries}}
   <br>
   <input type="submit" name="selected" value="{{name}}">

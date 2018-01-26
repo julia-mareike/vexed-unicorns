@@ -15,10 +15,19 @@
  <h1> Sooo close! </h1>
 
  You chose: {{selected}}
+ <br>
 
- The answer is: {{answer[0]}}!
+ The answer is: 
+ <br>
+ {{answerName}}!
+<br>
 
- <img src="flags/" + {{answer[1]}} + ".png">
+<figure class="answer">
+ <img src="flags/{{answerCode}}.png">
+</figure>
 
+<a href = "/quiz/1">Next flag!</a>
+<br>
+  <a href="/">I've had enough flags thx</a>
 </body>
 </html>
