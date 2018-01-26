@@ -1,5 +1,6 @@
 body {
-  background-color:white;
+  background: #ffc url("../images/rainbow_map.png") no-repeat center center fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img {
